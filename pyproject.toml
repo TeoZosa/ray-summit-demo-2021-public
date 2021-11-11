@@ -11,16 +11,18 @@ authors = [
 ]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.9,<3.10"
 
 # Project-specific
 aiofiles = "^0.7.0"
 dask = "^2021.11.1"
 fastapi = "^0.70.0"
-pandas = "^1.2.4"
+pandas = "^1.3.4"
 texthero = "^1.1.0"
 typer = "^0.4.0"
-xgboost-ray = "^0.1.5"
+ray = { version="^1.8.0", extras = ["default", "tune"] }
+xgboost-ray = { git="https://github.com/TeoZosa/xgboost_ray", branch="feat/remove-numpy-max-specifier" }
+
 
 [tool.poetry.dev-dependencies]
 
