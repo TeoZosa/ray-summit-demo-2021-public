@@ -30,7 +30,6 @@ def load_and_preprocess(path: str) -> dd.DataFrame:
 
 
 def main(num_trials: int = 1):
-    ray.client().connect()
 
     # Load data, preprocess, put into shared memory.
     data_path = "training_data.pkl"
